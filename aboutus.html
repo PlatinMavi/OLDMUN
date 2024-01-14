@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/8ae22b070a.js" crossorigin="anonymous"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Raleway&display=swap" rel="stylesheet">
+    <script>
+        // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark')
+        }
+    </script>
+</head>
+<body class="s dark:bg-gray-900">
+        
+    
+        <!-- navbar -->
+        <nav class="s bg-white border-gray-200 dark:bg-gray-900 dark:border-gray-700 z-30">
+            <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+            <a href="index.html" class="flex items-center">
+                <img src="Logo.png" class="h-16 w-16 mr-3" alt="">
+                <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">DERMUN'23</span>
+            </a>
+            <button data-collapse-toggle="navbar-dropdown" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-dropdown" aria-expanded="false">
+                <span class="sr-only">Open main menu</span>
+                <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+            </button>
+            <button id="theme-toggle" type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5">
+                <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+                <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+            </button>
+            <div class="hidden w-full md:block md:w-auto" id="navbar-dropdown">
+                <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+                <li>
+                    <a href="index.html" class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:bg-blue-600 md:dark:bg-transparent" aria-current="page">Home</a>
+                </li>
+                <li>
+                    <a href="commetees.html" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Committees/Study Guide</a>
+                </li>
+                <li>
+
+                    <button id="dropdownDividerButton" data-dropdown-toggle="dropdownDivider" class="flex items-center justify-between w-full py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent" type="button">DERMUN'23 <svg class="w-4 h-4 ml-2" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button>
+
+                    <!-- Dropdown menu -->
+                    <div id="dropdownDivider" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
+                        <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDividerButton">
+                            
+                            <li>
+                            <a href="schedule.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Schedule</a>
+                            </li>
+                            <li>
+                            <a href="faq.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">FAQ</a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                </li>
+                <li>
+                    <a href="aboutus.html" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">About Us</a>
+                </li>
+                <li>
+                    <a href="index.html#contact" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
+                </li>
+                </ul>
+            </div>
+            </div>
+        </nav>
+        <!-- navbar end -->
+
+        <!-- jumbotron -->
+ 
+        <section class="bg-center bg-no-repeat bg-cover bg-[url('threshold.png')] bg-gray-700 bg-blend-multiply">
+            <div class="px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-56">
+                <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl">We invest in finding solutions to world's problems</h1>
+                <p class="mb-8 text-lg font-normal text-gray-300 lg:text-xl sm:px-16 lg:px-48">
+                    DERMUN (Muammer Dereli Fen Lisesi Model United Nations) is a Model UN conference which will be held on June 13-14-15th, 2023 at Muammer Dereli Science High School, İzmit.
+
+                    We hope that this conference will bring many values to the delegates, including politics, general political issues in the world, international and individual relations and working principles of international organizations, especially the United Nations.</p>
+                <div class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
+                    <a href="#" class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
+                        Register Now
+                        <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                    </a>  
+                </div>
+            </div>
+        </section>
+
+        <!-- jumbotron end -->
+
+        <!-- team -->
+        <section class="bg-white dark:bg-gray-900">
+            <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6 ">
+                <div class="mx-auto max-w-screen-sm text-center mb-8 lg:mb-16">
+                    <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">We work in harmony</h2>
+                    <p class="font-light text-gray-500 lg:mb-16 sm:text-xl dark:text-gray-400">Explore our team and roles, each member is key person and value a lot to us. You can contact them in given platforms.</p>
+                </div>
+                <!-- it team-------------------------------------------- -->
+                <div class="mx-auto max-w-screen-sm text-center mb-8 lg:mb-16">
+                    <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">IT Team</h2>
+                </div>
+                <div class="grid gap-8 mb-6 lg:mb-16 md:grid-cols-2">
+                    <div class="items-center mx-8 bg-gray-50 lg:max-h-56 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700">
+                        <div>
+                            <img class="w-full max-h-60 rounded-lg sm:rounded-none sm:rounded-l-lg" src="photo/alper.jpg">
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                <p>Alper Gezer</p>
+                            </h3>
+                            <span class="text-gray-500 dark:text-gray-400">Web Developer</span>
+                            
+                        </div>
+                    </div> 
+                    <div class="items-center mx-8 bg-gray-50 lg:max-h-56 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700">
+                        <div>
+                            <img class="w-full max-h-60 rounded-lg sm:rounded-none sm:rounded-l-lg" src="photo/bedirhan.jpeg">
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                <p>Bedirhan Yavru</p>
+                            </h3>
+                            <span class="text-gray-500 dark:text-gray-400">Web Developer</span>
+                            
+                        </div>
+                    </div> 
+                    <div class="items-center mx-8 bg-gray-50 lg:max-h-56 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700">
+                        <div>
+                            <img class="w-full max-h-60 rounded-lg sm:rounded-none sm:rounded-l-lg" src="photo/arif.jpeg">
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                <p>Arif Kılıç</p>
+                            </h3>
+                            <span class="text-gray-500 dark:text-gray-400">Designer</span>
+                            
+                        </div>
+                    </div>
+                    <div class="items-center mx-8 bg-gray-50 lg:max-h-56 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700">
+                        <div>
+                            <img class="w-full max-h-60 rounded-lg sm:rounded-none sm:rounded-l-lg" src="photo/bennu.jpeg">
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                <p>Bennu Alan</p>
+                            </h3>
+                            <span class="text-gray-500 dark:text-gray-400">Head IT</span>
+                            
+                        </div>
+                    </div>
+                    <div class="items-center mx-8 bg-gray-50 lg:max-h-56 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700">
+                        <div>
+                            <img class="w-full max-h-60 rounded-lg sm:rounded-none sm:rounded-l-lg" src="photo/dila.jpeg">
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                <p>Zehra Dila Duman</p>
+                            </h3>
+                            <span class="text-gray-500 dark:text-gray-400">IT Team Member</span>
+                            
+                        </div>
+                    </div>
+                    <div class="items-center mx-8 bg-gray-50 lg:max-h-56 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700">
+                        <div>
+                            <img class="w-full max-h-60 rounded-lg sm:rounded-none sm:rounded-l-lg" src="photo/nihal.jpeg">
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                <p>Nihal Taşoğlu</p>
+                            </h3>
+                            <span class="text-gray-500 dark:text-gray-400">IT Team Member</span>
+                            
+                        </div>
+                    </div>
+                </div>  
+                <!-- general secretary------------------ -->
+                <div class="mx-auto max-w-screen-sm text-center mb-8 lg:mb-16">
+                    <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Secretary General</h2>
+                </div>
+                <div class="grid gap-8 mb-6 lg:mb-16 md:grid-cols-2">
+                    <div class="items-center mx-8 bg-gray-50 lg:max-h-56 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700">
+                        <div>
+                            <img class="w-full max-h-60 rounded-lg sm:rounded-none sm:rounded-l-lg" src="photo/kenan.jpeg">
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                <p>Kenan Mirzaoğlu</p>
+                            </h3>
+                            <span class="text-gray-500 dark:text-gray-400">Secretary General</span>
+                            
+                        </div>
+                    </div>
+
+
+
+                    <div class="items-center mx-8 bg-gray-50 lg:max-h-56 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700">
+                        <div>
+                            <img class="w-full max-h-60 rounded-lg sm:rounded-none sm:rounded-l-lg" src="photo/eylul.jpeg">
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                <p>Eylül Yaman</p>
+                            </h3>
+                            <span class="text-gray-500 dark:text-gray-400">Secretary General</span>
+                            
+                        </div>
+                    </div>
+                </div>
+                <!-- social media--------------------------------- -->
+                <div class="mx-auto max-w-screen-sm text-center mb-8 lg:mb-16">
+                    <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Social Media</h2>
+                </div>
+                <div class="grid gap-8 mb-6 lg:mb-16 md:grid-cols-2">
+                    <div class="items-center mx-8 bg-gray-50 lg:max-h-56 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700">
+                        <div>
+                            <img class="w-full max-h-60 rounded-lg sm:rounded-none sm:rounded-l-lg" src="photo/beyza.jpeg">
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                <p>Beyza Bakkal</p>
+                            </h3>
+                            <span class="text-gray-500 dark:text-gray-400">Head Of Social Media</span>
+                            
+                        </div>
+                    </div>
+
+                    <div class="items-center mx-8 bg-gray-50 lg:max-h-56 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700">
+                        <div>
+                            <img class="w-full max-h-60 rounded-lg sm:rounded-none sm:rounded-l-lg" src="photo/zeynepserbet.jpeg">
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                <p>Aşkım Zeynep Şerbetçioğlu</p>
+                            </h3>
+                            <span class="text-gray-500 dark:text-gray-400">Social Media Team Member</span>
+                            
+                        </div>
+                    </div>
+                </div>
+                <!-- crisis team --------------- -->
+                <div class="mx-auto max-w-screen-sm text-center mb-8 lg:mb-16">
+                    <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Crisis Team</h2>
+                </div>
+                <div class="grid gap-8 mb-6 lg:mb-16 md:grid-cols-2">
+                    
+
+                    <div class="items-center mx-8 bg-gray-50 lg:max-h-56 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700">
+                        <div>
+                            <img class="w-full max-h-60 rounded-lg sm:rounded-none sm:rounded-l-lg" src="photo/irem.jpeg">
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                <p>İrem Kelemençe</p>
+                            </h3>
+                            <span class="text-gray-500 dark:text-gray-400">Crisis Team Member</span>
+                            
+                        </div>
+                    </div>
+                    <div class="items-center mx-8 bg-gray-50 lg:max-h-56 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700">
+                        <div>
+                            <img class="w-full max-h-60 rounded-lg sm:rounded-none sm:rounded-l-lg" src="photo/zeynepY.JPG">
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                <p>Zeynep Yıldız</p>
+                            </h3>
+                            <span class="text-gray-500 dark:text-gray-400">Crisis Team Member</span>
+                            
+                        </div>
+                    </div>
+                        
+                </div>
+                <!-- entertainment team---------------- -->
+                <div class="mx-auto max-w-screen-sm text-center mb-8 lg:mb-16">
+                    <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Entertainment Team</h2>
+                </div>
+                <div class="grid gap-8 mb-6 lg:mb-16 md:grid-cols-2">
+                    <div class="items-center mx-8 bg-gray-50 lg:max-h-56 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700">
+                        <div>
+                            <img class="w-full max-h-60 rounded-lg sm:rounded-none sm:rounded-l-lg" src="photo/tugba.jpeg">
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                <p>Tuğba Ateş</p>
+                            </h3>
+                            <span class="text-gray-500 dark:text-gray-400">Head Of Entertainment</span>
+                            
+                        </div>
+                    </div>
+
+                    <div class="items-center mx-8 bg-gray-50 lg:max-h-56 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700">
+                        <div>
+                            <img class="w-full max-h-60 rounded-lg sm:rounded-none sm:rounded-l-lg" src="photo/nevbahar.JPG">
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                <p>Nevbahar Arslan</p>
+                            </h3>
+                            <span class="text-gray-500 dark:text-gray-400">Entertainment Team Member</span>
+                            
+                        </div>
+                    </div>
+                    <div class="items-center mx-8 bg-gray-50 lg:max-h-56 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700">
+                        <div>
+                            <img class="w-full max-h-60 rounded-lg sm:rounded-none sm:rounded-l-lg" src="photo/buse.jpeg">
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                <p>Buse Nur Okumuş</p>
+                            </h3>
+                            <span class="text-gray-500 dark:text-gray-400">Entertainment Team Member</span>
+                            
+                        </div>
+                    </div>
+                    <div class="items-center mx-8 mx-8 bg-gray-50 lg:max-h-56 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700">
+                        <div>
+                            <img class="w-full max-h-60 rounded-lg sm:rounded-none sm:rounded-l-lg" src="photo/irmakTa.jpeg">
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                <p>Irmak Tayhava</p>
+                            </h3>
+                            <span class="text-gray-500 dark:text-gray-400">Entertainment Team Member</span>
+                            
+                        </div>
+                    </div>
+                    <div class="items-center mx-8 bg-gray-50 lg:max-h-56 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700">
+                        <div>
+                            <img class="w-full max-h-60 rounded-lg sm:rounded-none sm:rounded-l-lg" src="photo/ecem.jpeg">
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                <p>Ecem Canikoğlu</p>
+                            </h3>
+                            <span class="text-gray-500 dark:text-gray-400">Entertainment Team Member</span>
+                            
+                        </div>
+                    </div>
+                </div>
+                    
+                <!-- press---------- -->
+                <div class="mx-auto max-w-screen-sm text-center mb-8 lg:mb-16">
+                    <h2 class="mb-4 mt-12 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Press</h2>
+                </div>
+                <div class="grid gap-8 mb-6 lg:mb-16 md:grid-cols-2">
+                    <div class="items-center mx-8 bg-gray-50 lg:max-h-56 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700">
+                        <div>
+                            <img class="w-full max-h-60 rounded-lg sm:rounded-none sm:rounded-l-lg" src="photo/nisa.JPG">
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                <p>Nisanur İriç</p>
+                            </h3>
+                            <span class="text-gray-500 dark:text-gray-400">Press Team Member</span>
+                            
+                        </div>
+                    </div>
+
+                    <div class="items-center mx-8 bg-gray-50 lg:max-h-56 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700">
+                        <div>
+                            <img class="w-full max-h-60 rounded-lg sm:rounded-none sm:rounded-l-lg" src="photo/arif.jpeg">
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                <p>Arif Kılıç</p>
+                            </h3>
+                            <span class="text-gray-500 dark:text-gray-400">Press Team Member</span>
+                            
+                        </div>
+                    </div>
+                    <div class="items-center mx-8 mx-8 bg-gray-50 lg:max-h-56 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700">
+                        <div>
+                            <img class="w-full max-h-60 rounded-lg sm:rounded-none sm:rounded-l-lg" src="photo/irmaksi.JPG">
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                <p>Irmak Şimşek</p>
+                            </h3>
+                            <span class="text-gray-500 dark:text-gray-400">Press Team Member</span>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <!-- advisor------------ -->
+                <div class="mx-auto max-w-screen-sm text-center mb-8 lg:mb-16">
+                    <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Advisor</h2>
+                </div>
+                <div class="grid gap-8 mb-6 lg:mb-16 md:grid-cols-2">
+                    
+
+                    <div class="items-center mx-8 bg-gray-50 lg:max-h-56 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700">
+                        <div>
+                            <img class="w-full max-h-60 rounded-lg sm:rounded-none sm:rounded-l-lg" src="photo/ingilizceci.jpeg">
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                <p>Zeynep Betül Kağan</p>
+                            </h3>
+                            <span class="text-gray-500 dark:text-gray-400">Advisor Of English Committees</span>
+                            
+                        </div>
+                    </div>
+                    <div class="items-center mx-8 bg-gray-50 lg:max-h-56 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700">
+                        <div>
+                            <img class="w-full max-h-60 rounded-lg sm:rounded-none sm:rounded-l-lg" src="photo/felsefeci.JPG">
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                <p>Fatma Mehtap Baran</p>
+                            </h3>
+                            <span class="text-gray-500 dark:text-gray-400">Advisor Of Turkish Committees</span>
+                            
+                        </div>
+                    </div>
+                        
+                </div>
+                    
+                
+                <!-- admin---------- -->
+                <div class="mx-auto max-w-screen-sm text-center mb-8 lg:mb-16">
+                    <h2 class="mb-4 mt-12 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Admin</h2>
+                </div>
+                <div class="grid gap-8 mb-6 lg:mb-16 md:grid-cols-2">
+                    <div class="items-center mx-8 bg-gray-50 lg:max-h-56 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700">
+                        <div>
+                            <img class="w-full max-h-60 rounded-lg sm:rounded-none sm:rounded-l-lg" src="photo/tugba.jpeg">
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                <p>Tuğba Ateş</p>
+                            </h3>
+                            <span class="text-gray-500 dark:text-gray-400">Head Of Admin</span>
+                            
+                        </div>
+                    </div>
+                    <div class="items-center mx-8 bg-gray-50 lg:max-h-56 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700">
+                        <div>
+                            <img class="w-full max-h-60 rounded-lg sm:rounded-none sm:rounded-l-lg" src="photo/betulseb.jpeg">
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                <p>Betül Şebnem Selvi</p>
+                            </h3>
+                            <span class="text-gray-500 dark:text-gray-400">SOCHUM</span>
+                            
+                        </div>
+                    </div> 
+                    <div class="items-center mx-8 bg-gray-50 lg:max-h-56 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700">
+                        <div>
+                            <img class="w-full max-h-60 rounded-lg sm:rounded-none sm:rounded-l-lg" src="photo/cemil.jpeg">
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                <p>Cemil Bulut</p>
+                            </h3>
+                            <span class="text-gray-500 dark:text-gray-400">Historical Committee</span>
+                            
+                        </div>
+                    </div> 
+                    <div class="items-center mx-8 bg-gray-50 lg:max-h-56 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700">
+                        <div>
+                            <img class="w-full max-h-60 rounded-lg sm:rounded-none sm:rounded-l-lg" src="photo/elifA.jpeg">
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                <p>Elif Afacan</p>
+                            </h3>
+                            <span class="text-gray-500 dark:text-gray-400">SECURITY</span>
+                            
+                        </div>
+                    </div>
+                    <div class="items-center mx-8 bg-gray-50 lg:max-h-56 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700">
+                        <div>
+                            <img class="w-full max-h-60 rounded-lg sm:rounded-none sm:rounded-l-lg" src="photo/ecrin.jpeg">
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                <p>Ecrin Naz Koyuncu</p>
+                            </h3>
+                            <span class="text-gray-500 dark:text-gray-400">Historical Committee</span>
+                            
+                        </div>
+                    </div>
+                    <div class="items-center mx-8 bg-gray-50 lg:max-h-56 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700">
+                        <div>
+                            <img class="w-full max-h-60 rounded-lg sm:rounded-none sm:rounded-l-lg" src="photo/gazel.jpeg">
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                <p>Gazel Gümüş</p>
+                            </h3>
+                            <span class="text-gray-500 dark:text-gray-400">UNHRC</span>
+                            
+                        </div>
+                    </div>
+                    <div class="items-center mx-8 bg-gray-50 lg:max-h-56 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700">
+                        <div>
+                            <img class="w-full max-h-60 rounded-lg sm:rounded-none sm:rounded-l-lg" src="photo/hiranur.jpeg">
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                <p>Hiranur Koçuoğlu</p>
+                            </h3>
+                            <span class="text-gray-500 dark:text-gray-400">UNHRC</span>
+                            
+                        </div>
+                    </div>
+                    <div class="items-center mx-8 bg-gray-50 lg:max-h-56 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700">
+                        <div>
+                            <img class="w-full max-h-60 rounded-lg sm:rounded-none sm:rounded-l-lg" src="photo/mustafaY.JPG">
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                <p>Mustafa Yıldırım</p>
+                            </h3>
+                            <span class="text-gray-500 dark:text-gray-400">UNESCO</span>
+                            
+                        </div>
+                    </div>
+                    <div class="items-center mx-8 bg-gray-50 lg:max-h-56 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700">
+                        <div>
+                            <img class="w-full max-h-60 rounded-lg sm:rounded-none sm:rounded-l-lg" src="photo/muzafferA.JPG">
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                <p>Muzaffer Arıcan</p>
+                            </h3>
+                            <span class="text-gray-500 dark:text-gray-400">UNESCO</span>
+                            
+                        </div>
+                    </div>
+                    <div class="items-center mx-8 bg-gray-50 lg:max-h-56 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700">
+                        <div>
+                            <img class="w-full max-h-60 rounded-lg sm:rounded-none sm:rounded-l-lg" src="photo/tiryaki.JPG">
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                <p>Yiğit Eren Tiryaki</p>
+                            </h3>
+                            <span class="text-gray-500 dark:text-gray-400">SOCHUM</span>
+                            
+                        </div>
+                    </div>
+                    <div class="items-center mx-8 bg-gray-50 lg:max-h-56 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700">
+                        <div>
+                            <img class="w-full max-h-60 rounded-lg sm:rounded-none sm:rounded-l-lg" src="photo/metin2.JPG">
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                <p>Ege Derin Metin</p>
+                            </h3>
+                            <span class="text-gray-500 dark:text-gray-400">Hallway Admin</span>
+                            
+                        </div>
+                    </div>
+                </div> 
+
+                <!-- chairboard------------ -->
+                <div class="mx-auto max-w-screen-sm text-center mb-8 lg:mb-16">
+                    <h2 class="mb-4 mt-12 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Chairboard</h2>
+                </div>
+                <div class="grid gap-8 mb-6 lg:mb-16 md:grid-cols-2">
+                    <div class="items-center mx-8 bg-gray-50 lg:max-h-56 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700">
+                        <div>
+                            <img class="w-full max-h-60 rounded-lg sm:rounded-none sm:rounded-l-lg" src="photo/elifsu.jpeg">
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                <p>Elifsu Gülgün</p>
+                            </h3>
+                            <span class="text-gray-500 dark:text-gray-400">Historical Committee - Chair</span>
+                            
+                        </div>
+                    </div> 
+                    <div class="items-center mx-8 bg-gray-50 lg:max-h-56 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700">
+                        <div>
+                            <img class="w-full max-h-60 rounded-lg sm:rounded-none sm:rounded-l-lg" src="photo/zulal.jpeg">
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                <p>Zülal Aralp</p>
+                            </h3>
+                            <span class="text-gray-500 dark:text-gray-400">Historical Committee - Co-Chair</span>
+                            
+                        </div>
+                    </div> 
+                    <div class="items-center mx-8 bg-gray-50 lg:max-h-56 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700">
+                        <div>
+                            <img class="w-full max-h-60 rounded-lg sm:rounded-none sm:rounded-l-lg" src="photo/esmanur.jpeg">
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                <p> Esmanur Özgan</p>
+                            </h3>
+                            <span class="text-gray-500 dark:text-gray-400">SOCHUM - Chair</span>
+                            
+                        </div>
+                    </div>
+                    <div class="items-center mx-8 bg-gray-50 lg:max-h-56 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700">
+                        <div>
+                            <img class="w-full max-h-60 rounded-lg sm:rounded-none sm:rounded-l-lg" src="photo/naz.jpeg">
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                <p>Naz Karaarslan</p>
+                            </h3>
+                            <span class="text-gray-500 dark:text-gray-400">SOCHUM - Co-Chair</span>
+                            
+                        </div>
+                    </div>
+                    <div class="items-center mx-8 bg-gray-50 lg:max-h-56 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700">
+                        <div>
+                            <img class="w-full max-h-60 rounded-lg sm:rounded-none sm:rounded-l-lg" src="photo/hilal.jpeg">
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                <p>Hilal Turpçu</p>
+                            </h3>
+                            <span class="text-gray-500 dark:text-gray-400">UNHRC - Chair</span>
+                            
+                        </div>
+                    </div>
+                    <div class="items-center mx-8 bg-gray-50 lg:max-h-56 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700">
+                        <div>
+                            <img class="w-full max-h-60 rounded-lg sm:rounded-none sm:rounded-l-lg" src="photo/pelin.jpeg">
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                <p>Pelin Taşova</p>
+                            </h3>
+                            <span class="text-gray-500 dark:text-gray-400">UNHRC - Co-Chair</span>
+                            
+                        </div>
+                    </div>
+                    <div class="items-center mx-8 bg-gray-50 lg:max-h-56 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700">
+                        <div>
+                            <img class="w-full max-h-60 rounded-lg sm:rounded-none sm:rounded-l-lg" src="photo/defneC.jpeg">
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                <p>Defne Canbaz</p>
+                            </h3>
+                            <span class="text-gray-500 dark:text-gray-400">UNSC - Chair</span>
+                            
+                        </div>
+                    </div>
+                    <div class="items-center mx-8 bg-gray-50 lg:max-h-56 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700">
+                        <div>
+                            <img class="w-full max-h-60 rounded-lg sm:rounded-none sm:rounded-l-lg" src="photo/ezgi.jpeg">
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                <p>Ezgi Duru Eren</p>
+                            </h3>
+                            <span class="text-gray-500 dark:text-gray-400">UNSC - Co-Chair</span>
+                            
+                        </div>
+                    </div>
+                    <div class="items-center mx-8 bg-gray-50 lg:max-h-56 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700">
+                        <div>
+                            <img class="w-full max-h-60 rounded-lg sm:rounded-none sm:rounded-l-lg" src="photo/nehir.jpeg">
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                <p>Nehir Duru</p>
+                            </h3>
+                            <span class="text-gray-500 dark:text-gray-400">UNESCO - Chair</span>
+                            
+                        </div>
+                    </div>
+                    <div class="items-center mx-8 bg-gray-50 lg:max-h-56 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700">
+                        <div>
+                            <img class="w-full max-h-60 rounded-lg sm:rounded-none sm:rounded-l-lg" src="photo/elifU.jpeg">
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                <p>Elif Ukuşlu</p>
+                            </h3>
+                            <span class="text-gray-500 dark:text-gray-400">UNESCO - Co-Chair</span>
+                            
+                        </div>
+                    </div>
+                </div> 
+
+            </div>
+          </section>
+        <!-- team end -->
+
+        <!-- footer -->  
+        <footer class="bg-gray-800 rounded-lg shadow m-4 mt-24">
+            <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
+            <span class="text-sm text-gray-300 sm:text-center dark:text-gray-400">© 2023 <p class="hover:underline">DERMUN™</p>. All Rights Reserved.
+            </span>
+            <ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
+                <li>
+                    <a href="aboutus.html" class="mr-4 hover:underline md:mr-6 ">About</a>
+                </li>
+                <li>
+                    <a href="#" class="mr-4 hover:underline md:mr-6">Privacy Policy</a>
+                </li>
+                <li>
+                    <a href="#" class="mr-4 hover:underline md:mr-6">Licensing</a>
+                </li>
+                <li>
+                    <a href="index.html#contact" class="hover:underline">Contact</a>
+                </li>
+            </ul>
+            </div>
+        </footer>
+        <!-- fotter end -->
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
